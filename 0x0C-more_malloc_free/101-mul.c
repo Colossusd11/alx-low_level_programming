@@ -129,8 +129,8 @@ if (a == NULL)
 init(a, ln - 1);
 for (ti = 12 - 1, i = 0; ti >= 0; ti--, i++)
 {
-	ti = mul(argv[2][ti], argv[1], l1 - 1, a, (ln - 2) - i);
-	if (ti == NULL)
+	t = mul(argv[2][ti], argv[1], l1 - 1, a, (ln - 2) - i);
+	if (t == NULL)
 	{
 		for (ti = 0; e[ti]; ti++)
 			_putchar(e[ti]);
