@@ -1,42 +1,24 @@
-#include <stdio.h>
-#include <stdlib.h>
+#ifndef STRTYP
+#define STRTYP
 
 /**
- * main - a function that returns a structure values
- * struct: used to create a structure function in c
- * Return: 0
+ * struct dog - structure of a dog
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: owner of dog
  */
-
-struct User
+struct dog
 {
 	char *name;
-	char *email;
-	int age;
+	float age;
+	char *owner;
 };
 
-struct User *new_user(char *name, char *email, int age)
-{
-	struct User *user;
+typedef struct dog dog_t;
 
-	user = malloc(sizeof(struct user));
-	if (user == NULL)
-		return (NULL);
-	user->name = name;
-	user->email = email;
-	user->age = age;
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+dog_t *new_dog(char *name, float age, char *owner);
+void free_dog(dog_t *d);
 
-	return user;
-}
-int main()
-{
-	struct user *user;
-
-	user = new_user("foo", "foo|foo.bar", 98);
-	if (user == NULL)
-		return (1);
-	printf("user %s created !\n", user->name);
-	printf("His email is: %s\n", user->email);
-	printf("And he is %d years old\n", user->age);
-
-	return 0;
-}
+#endif /*STRTYP*/
