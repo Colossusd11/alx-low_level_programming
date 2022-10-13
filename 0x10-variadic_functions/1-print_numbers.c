@@ -3,10 +3,11 @@
 #include <stdarg.h>
 
 /**
- * print_numbers, followed by a new line
- * @separator: the string to be printed between numbers
- * @n: the number of integer passed to the function
- * @...: a variable of number of numbers to be printed
+ * print_numbers - print number followed by a new line
+ * @separator: The string to be printed between numbers
+ * @n: The number of integer passed to the function
+ * @...: A variable of number of numbers to be printed
+ * Return: nums
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
