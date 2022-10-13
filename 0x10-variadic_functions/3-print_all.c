@@ -32,7 +32,7 @@ void print_all(const char * const format, ...)
 			case 'c':
 				printf("%c", va_arg(valist, int)), c = 1;
 				break;
-			case 'j':
+			case 'i':
 				printf("%d", va_arg(valist, int)), c = 1;
 				break;
 			case 'f':
